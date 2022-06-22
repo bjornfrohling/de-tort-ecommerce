@@ -28,7 +28,7 @@ export default function Layout({ children, categories }) {
                 <a aria-label="Home">
                   <p className="
                     sm:mr-8 sm:mb-0
-                           @apply mb-4 text-left text-xl mr-4
+                           @apply mb-4 text-left text-2xl mr-4
                   ">
                   Home
                   </p>
@@ -43,7 +43,7 @@ export default function Layout({ children, categories }) {
                     <a aria-label={category}>
                       <p className="
                           sm:mr-8 sm:mb-0
-                           @apply mb-4 text-left text-xl mr-4
+                           @apply mb-4 text-left text-2xl mr-4
                         ">
                         {category.charAt(0).toUpperCase() + category.slice(1)}
                       </p>
@@ -55,7 +55,7 @@ export default function Layout({ children, categories }) {
                 <a aria-label="All categories">
                   <p className="
                     sm:mr-8 sm:mb-0
-                           @apply mb-4 text-left text-xl mr-4
+                           @apply mb-4 text-left text-2xl mr-4
                   ">
                   All
                   </p>
