@@ -91,6 +91,26 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
           link={`/product/${slugify(inventory[3].name)}`}
         />
       </div>
+
+      <div className="pt-10 pb-6 flex flex-col items-start">
+        <h2 className="text-4xl mb-3"></h2>
+      </div>
+      <div className="pt-10 pb-6 flex flex-col items-start">
+        <h2 className="text-4xl mb-3">EMAIL</h2>
+        <p className="text-gray-600 text-xl">info@de-tort.ee</p>
+      </div>
+      <div className="pt-10 pb-6 flex flex-col items-start">
+        <h2 className="text-4xl mb-3">TÖÖTAME</h2>
+        <p className="text-gray-600 text-xl">
+          teisipäevast reedeni 15:00 - 18:00</p>
+        <p className="text-gray-600 text-xl">
+          llaupäeval 11:00 - 17:00</p>
+      </div>
+      <div className="pt-10 pb-6 flex flex-col items-start">
+        <h2 className="text-4xl mb-3">AADRESSIL</h2>
+        <p className="text-gray-600 text-xl">Pelguranna 3</p>
+        <p className="text-gray-600 text-xl">10312 Tallinn</p>
+      </div>
     </>
   )
 }
