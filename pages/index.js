@@ -96,20 +96,24 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         <h2 className="text-4xl mb-3"></h2>
       </div>
       <div className="pt-10 pb-6 flex flex-col items-start">
+        <h2 className="text-4xl mb-3">Instagram</h2>
+        <a className="text-gray-600 text-xl" target="_blank" href="https://www.instagram.com/de_tort_/">de_tort_</a>
+      </div>
+      <div className="pt-10 pb-6 flex flex-col items-start">
         <h2 className="text-4xl mb-3">Email</h2>
         <a className="mailto text-gray-600 text-xl" href="mailto:info@de-tort.ee">info@de-tort.ee</a>
       </div>
       <div className="pt-10 pb-6 flex flex-col items-start">
         <h2 className="text-4xl mb-3">Tootamet</h2>
-        <p className="text-gray-600 text-xl">
-          teisipäevast reedeni 15:00 - 18:00</p>
-        <p className="text-gray-600 text-xl">
-          llaupäeval 11:00 - 17:00</p>
+        <a className="text-gray-600 text-xl">
+          teisipäevast reedeni 15:00 - 18:00</a>
+        <a className="text-gray-600 text-xl">
+          llaupäeval 11:00 - 17:00</a>
       </div>
       <div className="pt-10 pb-6 flex flex-col items-start">
         <h2 className="text-4xl mb-3">Aadressil</h2>
         <a className="text-gray-600 text-xl" target="_blank" href="https://goo.gl/maps/5R4MnNRU7tGQ6Mh28">Pelguranna 3</a>
-        <p className="text-gray-600 text-xl">10312 Tallinn</p>
+        <a className="text-gray-600 text-xl" target="_blank" href="https://goo.gl/maps/5R4MnNRU7tGQ6Mh28">10312 Tallinn</a>
       </div>
     </>
   )
