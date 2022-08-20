@@ -108,7 +108,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
       </div>
       <div className="pt-10 pb-6 flex flex-col items-start">
         <h2 className="text-4xl mb-3">Aadressil</h2>
-        <p className="text-gray-600 text-xl">Pelguranna 3</p>
+        <a className="text-gray-600 text-xl" target="_blank" href="https://goo.gl/maps/5R4MnNRU7tGQ6Mh28">Pelguranna 3</a>
         <p className="text-gray-600 text-xl">10312 Tallinn</p>
       </div>
     </>
