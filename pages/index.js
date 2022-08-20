@@ -17,7 +17,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
           <meta name="description" content="De Tort - Pastries in Tallinn." />
           <meta property="og:title" content="De Tort" key="title" />
         </Head>
-        <div className="bg-green-200
+        <div className="bg-light
         p-6 pb-10 smpb-6
         flex lg:flex-row flex-col">
           <div className="pt-4 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
