@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import Button from '../../components/Button'
-import Image from '../../components/Image'
-import QuantityPicker from '../../components/QuantityPicker'
-import { fetchInventory } from '../../utils/inventoryProvider'
-import { slugify } from '../../utils/helpers'
-import CartLink from '../../components/CartLink'
-import { SiteContext, ContextProviderComponent } from '../../context/mainContext'
+import { useState } from "react"
+import Head from "next/head"
+import Button from "../../components/Button"
+import Image from "../../components/Image"
+import QuantityPicker from "../../components/QuantityPicker"
+import { fetchInventory } from "../../utils/inventoryProvider"
+import { slugify } from "../../utils/helpers"
+import CartLink from "../../components/CartLink"
+import { SiteContext, ContextProviderComponent } from "../../context/mainContext"
 
 const ItemView = (props) => {
   const [numberOfitems, updateNumberOfItems] = useState(1)
   const { product } = props
   const { price, image, name, description } = product
-  const { context: { addToCart }} = props
+  const { context: { addToCart } } = props
 
-  function addItemToCart (product) {
+  function addItemToCart(product) {
     product["quantity"] = numberOfitems
     addToCart(product)
   }
@@ -53,43 +53,57 @@ const ItemView = (props) => {
           <h2 className="text-2xl tracking-wide sm:py-8 py-6">€{price}</h2>
           <p className="text-gray-600 leading-7">{description}</p>
           <div className="my-6">
-            <QuantityPicker
+            {
+              /*
+                          <QuantityPicker
               increment={increment}
               decrement={decrement}
               numberOfitems={numberOfitems}
             />
+
+               */
+
+            }
+
           </div>
+          {
+            /*
           <Button
             full
             title="Add to Cart"
             onClick={() => addItemToCart(product)}
           />
+
+             */
+
+          }
+
         </div>
       </div>
     </>
   )
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const inventory = await fetchInventory()
   const paths = inventory.map(item => {
-    return { params: { name: slugify(item.name) }}
+    return { params: { name: slugify(item.name) } }
   })
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
-export async function getStaticProps ({ params }) {
-  const name = params.name.replace(/-/g," ")
+export async function getStaticProps({ params }) {
+  const name = params.name.replace(/-/g, " ")
   const inventory = await fetchInventory()
   const product = inventory.find(item => slugify(item.name) === slugify(name))
 
   return {
     props: {
       product,
-    }
+    },
   }
 }
 

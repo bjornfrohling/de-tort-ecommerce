@@ -34,6 +34,9 @@ function CartLink(props) {
 }
 
 function CartLinkWithContext(props) {
+
+  return <></>;
+
   return (
     <ContextProviderComponent>
       <SiteContext.Consumer>
